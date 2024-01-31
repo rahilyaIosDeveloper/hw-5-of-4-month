@@ -129,17 +129,12 @@ class AuthViewController: UIViewController {
         return btn
         
     }()
-    
-    
-    
-    
-    
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Notification", style: .plain, target: nil, action: nil)
         view.backgroundColor = .white
         
         view.addSubview(upLabel)
@@ -147,7 +142,7 @@ class AuthViewController: UIViewController {
         continueButton.addTarget(self, action: #selector(continueButtonPressed), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            upLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
+            upLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
             upLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             upLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24)
         ])
@@ -242,7 +237,7 @@ class AuthViewController: UIViewController {
         view.addSubview(continueButton)
         
         NSLayoutConstraint.activate([
-            continueButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 650),
+            continueButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 600),
             continueButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             continueButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
             continueButton.heightAnchor.constraint(equalToConstant: 58)

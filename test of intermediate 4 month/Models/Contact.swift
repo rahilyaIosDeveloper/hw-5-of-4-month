@@ -5,10 +5,12 @@
 //  Created by Rahilya Nazaralieva on 28/1/24.
 //
 
-import Foundation
+
+import UIKit
 
 struct Contact {
-    let image: String
-    let name: String
-    let phoneNumber: String
+    var personImage: UIImage
+    var nameWithActive: String
+    var personActive: String
+    var publickImage: UIImage
 }
